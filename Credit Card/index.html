@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+  </style>
+</head>
+<body>
+  <script src="script.js"></script>
+
+  <div class="container">
+    <div class="gradient">
+
+      <div class="credit_card">
+        <img src="images/card-logo.svg" class="credit_card_logo">
+
+        <div class="credit_card_info">
+          <div class="number" id="number">
+            0000 0000 0000 0000
+          </div>
+
+          <div class="name">
+            Jane Appleseed
+          </div>
+          <div class="date" id="date">
+            00/00
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="credit_card_back">
+
+        <div class="credit_card_info">
+
+          <div class="ccv" >
+            000
+          </div>
+        </div>
+        
+      </div>
+
+
+      
+
+
+      <img src="images/bg-main-desktop.png">
+      
+    </div>
+
+    <div class="form">
+      <form>
+        <div class="credit_name">
+          <label for="credit_name">CARDHOLDERS NAME</label>
+        </br>
+        <input type="text" id="credit_name" onfocusout="checkname()" name="credit_name" maxlenght="16">
+        <div class="credit_name_error" id="credit_name_error">Can't be blank</div>
+      </div>
+
+
+        <div class="credit_number">
+          <label for="credit_number">CARD NUMBER</label>
+        </br>
+
+
+        <input
+        type="tel" 
+        onkeypress="return onlyNumberKey(event)"
+        id="credit_number"
+        oninput="inputNumber();checkNumber()"
+        name="credit_number"
+        maxlenght="19"
+        placeholder="0000 0000 0000 0000"
+        >
+
+
+        <div class="credit_number_error" id="credit_number_error">-</div>
+      </div>
+
+      <div class="credit_date" onmouseleave="checkdate()">
+        <div class="label_text">
+          <label for="credit_number">
+            EXP. DATE (MM/YY)
+          </label>
+        </div>
+        <div class="date-box">
+      <input
+      type="number"
+      onkeypress="return onlyNumberKey(event)"
+      id="credit_month"
+      oninput="inputDate()"
+      name="credit_month"
+      onkeydown="
+      if (event.keyCode !==8) {
+        if (this.value.length >= 16) {
+          this.value = this.value.substr(0, 16);
+          return false;
+        }
+      };
+      return true;"
+      >
+
+
+      <input
+      type="number"
+      onkeypress="return onlyNumberKey(event)"
+      id="credit_year"
+      oninput="inputDate()"
+      name="credit_year"min="0"
+      
+      onkeydown="
+      if (event.keyCode !==8) {
+        if (this.value.length >= 2) {
+          this.value = this.value.substr(0, 2);
+          return false;
+        }
+        else if (this.value > 12) {
+          return false;
+        }
+      };
+      return true;"
+  >
+      
+  <script>
+
+    const inputM = document.getElementById("credit_month");
+    inputM.addEventListener('input', function(event) 
+  {
+      if (!/^\d{0,2}$/.test(this.value) || parseInt(this.value) > 12)
+      {
+      this.value = this.value.slice(0, -1);
+      }
+
+  });
+
+  
+
+
+    </script>
+      
+
+
+      <div class="credit_date_error" id="credit_date_error"></div>
+    </div>
+  </div>
+
+    <div class="credit_cvc">
+      <label for="credit_cvc">CVC</label>
+
+
+    <input
+    type="number" 
+    onkeypress="return onlyNumberKey(event)"
+    id="credit_cvc"
+    name="credit_cvc"
+    maxlenght="3"
+    placeholder="000"
+    >
+
+
+    <div class="credit_cvc_error" id="credit_cvc_error">-</div>
+  </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

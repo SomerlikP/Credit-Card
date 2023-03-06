@@ -1,0 +1,210 @@
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+body {
+    background-color: black;
+    margin: 35px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.container {
+    width: 1440px;
+    height: 900px;
+    margin: auto;
+    background-color: white;
+}
+.gradient {
+    float:left;
+}
+.credit_card {
+    position: absolute;
+    width: 30%;
+    height: 245px;
+    background-image: url('images/bg-card-front.png');
+    background-repeat: no-repeat;
+    top: 23%;
+    left: 370px;
+}
+.credit_card_logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+}
+.credit_card_info {
+    position: absolute;
+    width: 447px;
+    height: 245px;
+}
+.number {
+    color: white;
+    font-size: 30px;
+    margin-top: 30%;
+    margin-left: 30px;
+}
+.name {
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-left: 30px;
+    width: 70%;
+    float: left;
+}
+.date {
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-left: 365px;
+
+}
+.credit_card_back {
+    position: absolute;
+    width: 447px;
+    height: 245px;
+    background-image: url('images/bg-card-back.png');
+    top: 52%;
+    left: 470px;
+}
+.ccv {
+    color: white;
+    font-size: 16px;
+    margin-top: 110px;
+    margin-left: 360px;
+
+}
+.form {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.credit_number {
+    font-size: 20px;
+    width: 100%;
+
+}
+.credit_number_error {
+    font-size: 15px;
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    color: red;
+}
+.credit_number input {
+    width: 380px;
+    height: 45px;
+    border-radius: 10px;
+    outline: 0;
+    border: 2.5px solid rgb(121, 121, 121);
+    font-size: 20px;
+}
+.credit_number input:active, input:focus {
+    transition: 0.3s;
+    border: 3px solid black;
+}
+
+.credit_name {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 35px;
+
+}
+.credit_name input {
+    width: 380px;
+    height: 45px;
+    border-radius: 10px;
+    outline: 0;
+    border: 2.5px solid rgb(121, 121, 121);
+    font-size: 20px;
+}
+.credit_name_error {
+    font-size: 15px;
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    color: red;
+}
+.credit_name input:active, input:focus {
+    transition: 0.3s;
+    border: 3px solid black;
+}
+
+.credit_date {
+    margin-top: 25px;
+    font-size: 18px;
+    width: 40%;
+    margin-bottom: 35px;
+    float: left;
+
+
+}
+.date-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.credit_date input {
+    width: 50px;
+    height: 45px;
+    border-radius: 10px;
+    outline: 0;
+    border: 2.5px solid rgb(121, 121, 121);
+    font-size: 20px;
+}
+.credit_date_error {
+    font-size: 15px;
+    width: 100%;
+    height: 10px;
+    margin-top: 50px;
+    opacity: 1;
+    color: red;
+}
+.credit_date input:active, input:focus {
+    transition: 0.3s;
+    border: 3px solid black;
+}
+
+
+
+.credit_cvc {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 35px;
+    float: left;
+    flex-direction: column;
+
+}
+.credit_cvc input {
+    width: 30%;
+    height: 45px;
+    border-radius: 10px;
+    outline: 0;
+    border: 2.5px solid rgb(121, 121, 121);
+    font-size: 20px;
+}
+.credit_cvc_error {
+    font-size: 15px;
+    width: 100%;
+    height: 10px;
+    opacity: 1;
+    color: red;
+}
+.credit_cvc input:active, input:focus {
+    transition: 0.3s;
+    border: 3px solid black;
+}
+.label_text {
+    width: 100%;
+}
